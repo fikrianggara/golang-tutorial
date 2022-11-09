@@ -5,8 +5,6 @@ import (
 	"fmt"
 
 	"booking-app/hello"
-
-	"github.com/fikrianggara/golang-tutorial/second-module/timestamp"
 )
 
 func main() {
