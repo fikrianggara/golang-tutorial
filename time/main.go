@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"time/timestamp"
+	"time"
 )
 func main(){
 	fmt.Println("waktu sekarang ialah:")
-	timestamp.GetTime()
+	fmt.Println(time.Now())
 }
