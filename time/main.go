@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"second-module/timestamp"
+	"time/timestamp"
 )
 func main(){
 	fmt.Println("waktu sekarang ialah:")
