@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"booking-app/morestrings"
+	"fmt"
+
+	"github.com/fikrianggara/golang-tutorial/blob/main/booking-app/hello"
+)
 
 func main() {
-	fmt.Print("hello world")
+	fmt.Print(morestrings.ReverseRunes("!oG ,olleH"))
+	hello.Hello()
+
 }
