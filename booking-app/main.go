@@ -6,7 +6,7 @@ import (
 
 	"booking-app/hello"
 
-	"github.com/fikrianggara/golang-tutorial/booking-app/another-module/timestamp"
+	"github.com/fikrianggara/golang-tutorial/second-module/timestamp"
 )
 
 func main() {
