@@ -4,11 +4,11 @@ import (
 	"booking-app/morestrings"
 	"fmt"
 
-	"github.com/google/go-cmp/cmp"
+	"booking-app/hello"
 )
 
 func main() {
 	fmt.Print(morestrings.ReverseRunes("!oG ,olleH"))
-	cmp.Diff("Hello World", "Hello Go")
+	hello.HelloInIndonesia()
 
 }
