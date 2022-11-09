@@ -6,12 +6,12 @@ import (
 
 	"booking-app/hello"
 
-	"github.com/fikrianggara/golang-tutorial/time/timestamp"
+	"github.com/fikrianggara/golang-tutorial/time"
 )
 
 func main() {
 	fmt.Print(morestrings.ReverseRunes("!oG ,olleH"))
-	fmt.Print(timestamp.GetTime()) 
+	fmt.Println(time.GetTime()) 
 	hello.HelloInIndonesia()
 
 }
