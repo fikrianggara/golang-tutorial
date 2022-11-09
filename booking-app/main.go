@@ -11,7 +11,7 @@ import (
 
 func main() {
 	fmt.Print(morestrings.ReverseRunes("!oG ,olleH"))
-	timestamp.GetTime()
+	fmt.Print(timestamp.GetTime()) 
 	hello.HelloInIndonesia()
 
 }
