@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-tutorial/humanClass"
+	"go-tutorial/library"
 )
 
 func main() {
@@ -59,6 +59,11 @@ func main() {
 	//slicing menyimpan alamat dari elemen,
 	//jadi ketika ada perubahan nilai dari fruits, maka temp juga ikut berubah
 
-	var fikri humanClass.Human = humanClass.CreateInstance("Fikri", 22)
+	// var fikri humanClass.Human = humanClass.CreateInstance("Fikri", 22)
+	// fikri.SayHello()
+	fikri := library.CreateInstance("fikri", 22)
 	fikri.SayHello()
+	fikri.SetAge(21)
+	fikri.SayHello()
+	hello.
 }
