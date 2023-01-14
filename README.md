@@ -1,2 +1,3 @@
 # golang-tutorial
-golang basic tutorials from TechWorld with Nana youtube's channel
+repo to learn and explore golang. 
+I'm using novalagung excellent golang materials
