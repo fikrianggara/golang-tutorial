@@ -5,3 +5,7 @@ import "fmt"
 func SayHello() {
 	fmt.Println("hello from hello package uwaw.go")
 }
+
+func main() {
+	SayHello()
+}

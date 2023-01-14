@@ -1,3 +1,3 @@
-module go-tutorial
+module golang-tutorial
 
 go 1.18

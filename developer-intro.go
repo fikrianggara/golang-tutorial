@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
-	"go-tutorial/library"
 )
 
-func main() {
+func InitDeveloperIntro() {
 	var firstname string = "Fikri"
 	lastname := "Septrian"
 	var age int
@@ -37,33 +36,4 @@ func main() {
 	fmt.Println("I'm a ", ageClasses, sex)
 	fmt.Println("my academics :", academics)
 
-	// var fruits = [4]string{"apple",
-	// 	"grape",
-	// 	"banana",
-	// 	"melon"}
-
-	// // i dipake, kalo ngga dipake bisa dibuat sebagai '_' aja
-	// for i, fruit := range fruits {
-	// 	fmt.Printf("elemen %d : %s\n", i, fruit)
-	// }
-
-	// for _, fruit := range fruits {
-	// 	fmt.Println("buah", fruit)
-
-	// }
-
-	// temp := fruits[0:3] //slicing
-	// fmt.Println(temp)
-	// fruits[0] = "strawberry"
-	// fmt.Println(temp)
-	//slicing menyimpan alamat dari elemen,
-	//jadi ketika ada perubahan nilai dari fruits, maka temp juga ikut berubah
-
-	// var fikri humanClass.Human = humanClass.CreateInstance("Fikri", 22)
-	// fikri.SayHello()
-	fikri := library.CreateInstance("fikri", 22)
-	fikri.SayHello()
-	fikri.SetAge(21)
-	fikri.SayHello()
-	hello.
 }

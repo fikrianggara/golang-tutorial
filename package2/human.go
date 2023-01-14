@@ -1,9 +1,9 @@
-package library
+package humanClass
 
 import "fmt"
 
 func SayHello() {
-	fmt.Println("hello from package library")
+	fmt.Println("hello from human's package, human.go")
 }
 
 type Human struct {
