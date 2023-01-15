@@ -7,7 +7,7 @@ func main() {
 	InitDeveloperIntro()
 	fmt.Println("---------multipackage example----------")
 	initMultiPackageExample()
-	fmt.Println("---------interface example----------")
-	initInterfaceExample()
+	//fmt.Println("---------interface example----------")
+	//initInterfaceExample()
 
 }
