@@ -7,6 +7,7 @@ func main() {
 	// initMultiPackageExample()
 	//fmt.Println("---------interface example----------")
 	//initInterfaceExample()
-	initEmbedInterfaceExample()
+	// initEmbedInterfaceExample()
+	initPointerExample()
 
 }

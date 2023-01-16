@@ -89,7 +89,7 @@ func (k kubus) volume() float32 {
 //tapi kalo instance memiliki method yang tidak ada di definisi interface (contohnya setTinggi())
 // tidak perlu menginisiasi objek sebagai alammat
 
-func (k *kubus) setTinggi(newT uint) {
+func (k kubus) setTinggi(newT uint) {
 	k.tinggi = newT
 }
 
