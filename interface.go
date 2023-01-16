@@ -10,7 +10,7 @@ import (
 // bisa digunakan jika sudah ada isinya, yaitu
 // object yang memiliki method dengan nama yang sama dengan interface
 
-type hitung interface {
+type hitung2D interface {
 	getLuas() float32
 	getKeliling() float32
 }
@@ -48,9 +48,9 @@ func (l lingkaran) getKeliling() float32 {
 }
 
 func initInterfaceExample() {
-	var persegiObj hitung
+	var persegiObj hitung2D
 	persegiObj = kotak{panjang: 12, lebar: 10}
-	var lingkaranObj hitung
+	var lingkaranObj hitung2D
 	lingkaranObj = lingkaran{10}
 
 	// karena bisa saja ada banyak variabel yang menggunakan tipe data interface,
@@ -59,4 +59,52 @@ func initInterfaceExample() {
 
 	fmt.Println("apakah persegi :", persegiObj.(kotak).Ispersegi())
 	fmt.Println("jari jari lingkaran", lingkaranObj.(lingkaran).getJariJari())
+}
+
+// contoh embed interface (interface di dalam interace)
+type hitung3D interface {
+	volume() float32
+}
+
+//kubus inherit dari kotak
+type kubus struct {
+	kotak
+	tinggi uint
+}
+
+// inteface di dalam interface
+// jika salah satu method di interface butuh argumen pointer, maka inisiasi objek harus mengembalikan alamat
+// contoh
+// var kubusX hitung = &kubus{}
+
+type hitung interface {
+	hitung2D
+	hitung3D
+}
+
+func (k kubus) volume() float32 {
+	return float32(k.panjang * k.lebar * k.tinggi)
+}
+
+//tapi kalo instance memiliki method yang tidak ada di definisi interface (contohnya setTinggi())
+// tidak perlu menginisiasi objek sebagai alammat
+
+func (k *kubus) setTinggi(newT uint) {
+	k.tinggi = newT
+}
+
+// func (k *kubus)
+
+func initEmbedInterfaceExample() {
+	// kotak1 := kotak{panjang: 5, lebar: 4}
+	var kubusInterface hitung = kubus{kotak: kotak{panjang: 5, lebar: 4}, tinggi: 6}
+	var kubus1 kubus = kubusInterface.(kubus)
+
+	fmt.Println("lebar :", kubus1.lebar)
+	fmt.Println("panjang :", kubus1.panjang)
+	fmt.Println("tinggi :", kubus1.tinggi)
+	fmt.Println("volume:", kubus1.volume())
+	kubus1.setTinggi(3)
+	fmt.Println("tinggi ", kubus1.tinggi)
+	fmt.Println("volume:", kubus1.volume())
 }
