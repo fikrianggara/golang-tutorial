@@ -8,6 +8,8 @@ func main() {
 	//fmt.Println("---------interface example----------")
 	//initInterfaceExample()
 	// initEmbedInterfaceExample()
-	initPointerExample()
+	// initPointerExample()
+	// initDynamicTypingExample()
+	initReflectExample()
 
 }

@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"reflect"
 )
 
 // interface merupakan tipe data
@@ -89,7 +90,7 @@ func (k kubus) volume() float32 {
 //tapi kalo instance memiliki method yang tidak ada di definisi interface (contohnya setTinggi())
 // tidak perlu menginisiasi objek sebagai alammat
 
-func (k kubus) setTinggi(newT uint) {
+func (k *kubus) setTinggi(newT uint) {
 	k.tinggi = newT
 }
 
@@ -107,4 +108,24 @@ func initEmbedInterfaceExample() {
 	kubus1.setTinggi(3)
 	fmt.Println("tinggi ", kubus1.tinggi)
 	fmt.Println("volume:", kubus1.volume())
+}
+
+func initDynamicTypingExample() {
+	//kita bisa menggunakan dynamic typing di go, yaitu dengan menggunakan empty interface
+
+	var anyType interface{}
+	anyType = 2
+	fmt.Println("type of anyType :", reflect.ValueOf(anyType).Type(), ". value :", anyType)
+	anyType = "fikri"
+	fmt.Println("type of anyType :", reflect.ValueOf(anyType).Type(), ". value :", anyType)
+
+	//penggunaan slice, map dan interface (mirip JSON)
+	var students = []map[string]interface{}{
+		{"nama": "fikri", "age": 22},
+		{"nama": "john", "age": 30},
+	}
+
+	for _, item := range students {
+		fmt.Println(item)
+	}
 }
