@@ -19,4 +19,6 @@ func initMultiPackageExample() {
 	//from human package human.go file
 	var humanObj = humans.CreateInstance("fikri", 22)
 	humanObj.SayHello()
+	humanObj.SetAge(20)
+	humanObj.SayHello()
 }
